@@ -1,0 +1,7 @@
+# will load from "{{site.baseurl}}/js/{{asset.src}}.js"
+js:
+    - src: bootstrap-3.3.6.min.js
+
+# will load from "{{site.baseurl}}/css/{{asset.src}}.css"
+css:
+   #  - src: wow-animate.min.css
