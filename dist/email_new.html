@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://hotelguy.github.io/desk_theme/css/desk.css">
 
+
 <div id="desk-external-variables-email_new" class="desk-external-variables">
 	<div id="system-snippets-name_required">{{system.snippets.name_required}}</div>
 	<div id="system-snippets-email_required">{{system.snippets.email_required}}</div>
@@ -21,110 +22,106 @@
 			<div id='form'>
 				{{form_begin}}
 
-
 				<div class="bs">
 
-
-
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_check_in
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_check_in }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_check_out
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_check_out }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_number_of_rooms
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_number_of_rooms }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_room_type
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_room_type }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_city
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_city }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_state
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_state }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_country
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_country }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_hotels
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_hotels }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_budget
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_budget }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_notes
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_notes }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_guests_per_room
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_guests_per_room }}
 						</div>
 					</div>
 					<div class='form-group'>
-						<span class='label'>
+						<label for="">
 							ticket_custom_wa_pref
-						</span>
+						</label>
 						<div>
 							{{ ticket_custom_wa_pref }}
 						</div>
 					</div>
+
 				</div>
-
-
 
 
 
@@ -183,18 +180,13 @@
 			</div>
 		</div>
 	</div>
-	<!--
-	***************
-	The following attribution needs to remain as is in terms of wording with the appropriate link back to desk.com as per our terms of service: http://www.desk.com/terms
-	If you would like, you may change the location or the styling to better match your site, but the content and the link must remain in the template and visible to end users.
-	****************
--->
-<div id='footer'>
-	{{ desk.page.theme.footer_content }}
-	<div class="powered_by_desk">
-		<a href='http://www.desk.com'><div class="powered_by_logo"></div></a>
-		Powered by &nbsp;Desk.com
+
+	<div id='footer'>
+		{{ desk.page.theme.footer_content }}
+		<div class="powered_by_desk">
+			<a href='http://www.desk.com'><div class="powered_by_logo"></div></a>
+			Powered by &nbsp;Desk.com
+		</div>
 	</div>
-</div>
 </div>
 <script type="text/javascript" src="{{desk_javascript_host}}portal/desk.portal.body.email_new.js"></script>
