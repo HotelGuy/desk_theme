@@ -7,7 +7,7 @@
 	@import "bootstrap";
 	// @import "bootswatch/superhero/bootswatch";
 
-	input, select {
+	input, select, textarea {
 		 @extend .form-control;
 	}
 
