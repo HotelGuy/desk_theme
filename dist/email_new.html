@@ -23,158 +23,172 @@
 
 				<div class="bs">
 
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_check_in
-						</label>
-						<div>
-							{{ ticket_custom_check_in }}
+					<div class="row">
+						<div class="col-sm-5">
+							<div class='form-group form-group-lg'>
+								<label for="ticket_custom5">
+									City
+								</label>
+								<div>
+									{{ ticket_custom_city }}
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class='form-group form-group-lg'>
+								<label for="ticket_custom6">
+									State
+								</label>
+								<div>
+									{{ ticket_custom_state }}
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class='form-group form-group-lg'>
+								<label for="ticket_custom7">
+									Country
+								</label>
+								<div>
+									{{ ticket_custom_country }}
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_check_out
-						</label>
-						<div>
-							{{ ticket_custom_check_out }}
+
+					{% if current_user == nil or current_user.is_guest %}
+					<div class="row">
+						<div class="col-sm-6">
+							<div class='form-group'>
+								<label for="">
+									{{system.snippets.your_name}} <span>({{system.snippets.required}})</span>
+								</label>
+								<div>
+									<input value='{{ interaction.name }}' id='interaction_name' maxlength='100' name='interaction[name]' type='text' />
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class='form-group'>
+								<label for="">
+									{{system.snippets.your_email}} <span>({{system.snippets.required}})</span>
+								</label>
+								<div>
+									<input value='{{ interaction.email }}' id='interaction_email' maxlength='100' name='interaction[email]' type='text' />
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_number_of_rooms
-						</label>
-						<div>
-							{{ ticket_custom_number_of_rooms }}
+					{% endif %}
+
+					<div class="row">
+						<div class="col-sm-6">
+							<div class='form-group'>
+								<label for="ticket_custom1">
+									Check-in
+								</label>
+								<div>
+									{{ ticket_custom_check_in }}
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class='form-group'>
+								<label for="ticket_custom2">
+									Check-out
+								</label>
+								<div>
+									{{ ticket_custom_check_out }}
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_room_type
-						</label>
-						<div>
-							{{ ticket_custom_room_type }}
+
+
+					<div class="row">
+						<div class="col-sm-4">
+							<div class='form-group'>
+								<label for="ticket_custom3">
+									Number of rooms needed?
+								</label>
+								<div>
+									{{ ticket_custom_number_of_rooms }}
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class='form-group'>
+								<label for="ticket_custom11">
+									How many people in your party?
+								</label>
+								<div>
+									{{ ticket_custom_guests_per_room }}
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class='form-group'>
+								<label for="ticket_custom4">
+									Room Type
+								</label>
+								<div>
+									{{ ticket_custom_room_type }}
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_city
-						</label>
-						<div>
-							{{ ticket_custom_city }}
+
+
+					<div class="row">
+						<div class="col-sm-4">
+							<div class='form-group'>
+								<label for="ticket_custom8">
+									Do you have a preferred hotel?
+								</label>
+								<div>
+									{{ ticket_custom_hotels }}
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class='form-group'>
+								<label for="ticket_custom9">
+									What's your budget?
+								</label>
+								<div>
+									{{ ticket_custom_budget }}
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class='form-group'>
+								<label for="ticket_custom12">
+									Preferred Welcome Amenity
+								</label>
+								<div>
+									{{ ticket_custom_wa_pref }}
+								</div>
+							</div>
 						</div>
 					</div>
+
+
 					<div class='form-group'>
 						<label for="">
-							ticket_custom_state
+							{{system.snippets.message}} <span>({{system.snippets.required}})</span>
 						</label>
 						<div>
-							{{ ticket_custom_state }}
+							<textarea id='email_body' name='email[body]'>{{email.body}}</textarea>
 						</div>
 					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_country
-						</label>
-						<div>
-							{{ ticket_custom_country }}
-						</div>
-					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_hotels
-						</label>
-						<div>
-							{{ ticket_custom_hotels }}
-						</div>
-					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_budget
-						</label>
-						<div>
-							{{ ticket_custom_budget }}
-						</div>
-					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_notes
-						</label>
-						<div>
-							{{ ticket_custom_notes }}
-						</div>
-					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_guests_per_room
-						</label>
-						<div>
-							{{ ticket_custom_guests_per_room }}
-						</div>
-					</div>
-					<div class='form-group'>
-						<label for="">
-							ticket_custom_wa_pref
-						</label>
-						<div>
-							{{ ticket_custom_wa_pref }}
-						</div>
+
+					<div class='input-button'>
+						<input id='email_submit' name='commit' type='submit' value='{{system.snippets.send_email}}' />
+						<img alt='Ajax-loader-small' id='email_submit_spinner' src='{{ "/images/ajax-loader-small.gif" | portal_image_url: image_asset_host }}' style='display: none; margin: 7px 0 0 5px; position: absolute;' />
 					</div>
 
 				</div>
 
-
-
-
-				{% if current_user == nil or current_user.is_guest %}
-				<div class='input-block'>
-					<span class='label'>
-						{{system.snippets.your_name}} <span>({{system.snippets.required}})</span>
-					</span>
-					<div>
-						<input value='{{ interaction.name }}' id='interaction_name' maxlength='100' name='interaction[name]' type='text' />
-					</div>
-				</div>
-				<div class='input-block'>
-					<span class='label'>
-						{{system.snippets.your_email}} <span>({{system.snippets.required}})</span>
-					</span>
-					<div>
-						<input value='{{ interaction.email }}' id='interaction_email' maxlength='100' name='interaction[email]' type='text' />
-					</div>
-				</div>
-				{% endif %}
-				<div class='input-block'>
-					<span class='label'>
-						{{system.snippets.subject}} <span>({{system.snippets.required}})</span>
-					</span>
-					<div>
-						<input id='email_subject' maxlength='100' name='email[subject]' type='text' value='{% if search_term and search_term != '' %}{{search_term}}{% else %}{{email.subject}}{%endif%}'/>
-					</div>
-				</div>
-				<div class='input-block'>
-					<span class='label'>
-						{{system.snippets.message}} <span>({{system.snippets.required}})</span>
-					</span>
-					<div>
-						<textarea id='email_body' name='email[body]'>{{email.body}}</textarea>
-					</div>
-				</div>
-				<div class='input-block'>
-					<span class='label'>
-						{{system.snippets.file_attachment}}
-					</span>
-					<div class="desk_file_upload">
-						<input name="case_attachment[attachment]" size="84" type="file"/>
-						<div class="faux-file-field">
-							<input type="text" disabled="disabled"/>
-						</div>
-						<input type="button" value="{{system.snippets.choose_file}}"/>
-					</div>
-				</div><br/>
-				<div class='input-button'>
-					<input id='email_submit' name='commit' type='submit' value='{{system.snippets.send_email}}' />
-					<img alt='Ajax-loader-small' id='email_submit_spinner' src='{{ "/images/ajax-loader-small.gif" | portal_image_url: image_asset_host }}' style='display: none; margin: 7px 0 0 5px; position: absolute;' />
-				</div>
 				{{form_end}}
 			</div>
 		</div>
