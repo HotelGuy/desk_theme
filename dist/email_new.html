@@ -24,34 +24,41 @@
 				<div class="bs">
 
 					<div class="row">
-						<div class="col-sm-5">
+						<div class="col-sm-8 col-sm-offset-2">
 							<div class='form-group form-group-lg'>
+								<label for="" class="lead text-center">
+									Where would you like to go?
+								</label>
+								<p>
+									{{ ticket_custom_destination }}
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-5">
+							<div class='form-group'>
 								<label for="ticket_custom5">
 									City
 								</label>
-								<div>
-									{{ ticket_custom_city }}
-								</div>
+								{{ ticket_custom_city }}
 							</div>
 						</div>
 						<div class="col-sm-3">
-							<div class='form-group form-group-lg'>
+							<div class='form-group'>
 								<label for="ticket_custom6">
 									State
 								</label>
-								<div>
-									{{ ticket_custom_state }}
-								</div>
+								{{ ticket_custom_state }}
 							</div>
 						</div>
 						<div class="col-sm-4">
-							<div class='form-group form-group-lg'>
+							<div class='form-group'>
 								<label for="ticket_custom7">
 									Country
 								</label>
-								<div>
-									{{ ticket_custom_country }}
-								</div>
+								{{ ticket_custom_country }}
 							</div>
 						</div>
 					</div>
@@ -63,9 +70,7 @@
 								<label for="">
 									{{system.snippets.your_name}} <span>({{system.snippets.required}})</span>
 								</label>
-								<div>
-									<input value='{{ interaction.name }}' id='interaction_name' maxlength='100' name='interaction[name]' type='text' />
-								</div>
+								<input value='{{ interaction.name }}' id='interaction_name' maxlength='100' name='interaction[name]' type='text' />
 							</div>
 						</div>
 						<div class="col-sm-6">
@@ -73,9 +78,7 @@
 								<label for="">
 									{{system.snippets.your_email}} <span>({{system.snippets.required}})</span>
 								</label>
-								<div>
-									<input value='{{ interaction.email }}' id='interaction_email' maxlength='100' name='interaction[email]' type='text' />
-								</div>
+								<input value='{{ interaction.email }}' id='interaction_email' maxlength='100' name='interaction[email]' type='text' />
 							</div>
 						</div>
 					</div>
@@ -87,9 +90,7 @@
 								<label for="ticket_custom1">
 									Check-in
 								</label>
-								<div>
-									{{ ticket_custom_check_in }}
-								</div>
+								{{ ticket_custom_check_in }}
 							</div>
 						</div>
 						<div class="col-sm-6">
@@ -97,9 +98,7 @@
 								<label for="ticket_custom2">
 									Check-out
 								</label>
-								<div>
-									{{ ticket_custom_check_out }}
-								</div>
+								{{ ticket_custom_check_out }}
 							</div>
 						</div>
 					</div>
@@ -111,9 +110,7 @@
 								<label for="ticket_custom3">
 									Number of rooms needed?
 								</label>
-								<div>
-									{{ ticket_custom_number_of_rooms }}
-								</div>
+								{{ ticket_custom_number_of_rooms }}
 							</div>
 						</div>
 						<div class="col-sm-4">
@@ -121,9 +118,7 @@
 								<label for="ticket_custom11">
 									How many people in your party?
 								</label>
-								<div>
-									{{ ticket_custom_guests_per_room }}
-								</div>
+								{{ ticket_custom_guests_per_room }}
 							</div>
 						</div>
 						<div class="col-sm-4">
@@ -131,9 +126,7 @@
 								<label for="ticket_custom4">
 									Room Type
 								</label>
-								<div>
-									{{ ticket_custom_room_type }}
-								</div>
+								{{ ticket_custom_room_type }}
 							</div>
 						</div>
 					</div>
@@ -145,9 +138,7 @@
 								<label for="ticket_custom8">
 									Do you have a preferred hotel?
 								</label>
-								<div>
-									{{ ticket_custom_hotels }}
-								</div>
+								{{ ticket_custom_hotels }}
 							</div>
 						</div>
 						<div class="col-sm-4">
@@ -155,9 +146,7 @@
 								<label for="ticket_custom9">
 									What's your budget?
 								</label>
-								<div>
-									{{ ticket_custom_budget }}
-								</div>
+								{{ ticket_custom_budget }}
 							</div>
 						</div>
 						<div class="col-sm-4">
@@ -165,9 +154,7 @@
 								<label for="ticket_custom12">
 									Preferred Welcome Amenity
 								</label>
-								<div>
-									{{ ticket_custom_wa_pref }}
-								</div>
+								{{ ticket_custom_wa_pref }}
 							</div>
 						</div>
 					</div>
@@ -177,9 +164,7 @@
 						<label for="">
 							{{system.snippets.message}} <span>({{system.snippets.required}})</span>
 						</label>
-						<div>
-							<textarea id='email_body' name='email[body]'>{{email.body}}</textarea>
-						</div>
+						<textarea id='email_body' name='email[body]'>{{email.body}}</textarea>
 					</div>
 
 					<div class='input-button'>
@@ -203,4 +188,5 @@
 	</div>
 </div>
 <script type="text/javascript" src="{{desk_javascript_host}}portal/desk.portal.body.email_new.js"></script>
-<script type="text/javascript" src="https://hotelguy.github.io/desk_theme/javascripts/theme.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://hotelguy.github.io/desk_theme/javascripts/desk.js"></script>
