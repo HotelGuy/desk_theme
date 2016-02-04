@@ -1,7 +1,10 @@
 # will load from "{{site.baseurl}}/js/{{asset.src}}.js"
 js:
     - src: bootstrap-3.3.6.min.js
+    - src: http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js
+      remote: true
     - src: theme.js
+   #  - src: desk.js
 
 # will load from "{{site.baseurl}}/css/{{asset.src}}.css"
 css:
