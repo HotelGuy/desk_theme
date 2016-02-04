@@ -6,7 +6,7 @@ $ ->
 	# autocomplete cities
 	$('#ticket_custom13').autocomplete
 		source: (request, response) ->
-			$.getJSON 'http://gd.geobytes.com/AutoCompleteCity?callback=?&q=' + request.term, (data) ->
+			$.getJSON '//gd.geobytes.com/AutoCompleteCity?callback=?&q=' + request.term, (data) ->
 				response data
 				return
 			return
