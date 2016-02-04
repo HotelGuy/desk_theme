@@ -13,7 +13,7 @@ $ ->
 				jQuery('#ticket_custom5').val data.geobytescity
 				jQuery('#ticket_custom6').val data.geobytesregion
 				jQuery('#ticket_custom7').val data.geobytescountry
-			   return
+			return
 		return
 
 	# autocomplete cities
