@@ -32,9 +32,9 @@ $ ->
 	# show/hide rooms
 	$('#rooms .room-info:gt(0)').hide()
 	$('#ticket_custom3').change ->
+		n = parseInt $(this).val()
 		$('#rooms .room-info:gt(0)').hide()
 		$('#rooms .more-than-8').hide()
-		n = parseInt $(this).val()
 		$('#rooms .room-info:lt('+n+')').show()
 		if $(this).val() == 'I need more than 8 rooms! '
 		  $('#rooms .room-info').hide()
@@ -49,7 +49,5 @@ $ ->
 			theID = $elem.attr('id')
 			$elem.replaceWith( $default.clone().attr('name', theName).attr('id', theID) )
 			return
-	roomTypeIds = [32,33,34,35,36,37]
-	generateFields(roomTypeIds, 4)
-	roomGuestCountIds = [26,27,28,29,30,31]
-	generateFields(roomGuestCountIds, 11)
+	generateFields([32,33,34,35,36,37], 4) # room types
+	generateFields([26,27,28,29,30,31], 11) # guest counts
