@@ -12,6 +12,7 @@
 <div id='breadcrumbs'>
 	<a href='{{desk.system.links.home}}'>{{system.snippets.home}}</a> &rsaquo; {{system.snippets.email_us}}
 </div>
+
 <div id='support-main'>
 	<div class='support-body'>
 		<div class='content'>
@@ -61,9 +62,11 @@
 						</div>
 					</div>
 
+					<hr>
+
 					{% if current_user == nil or current_user.is_guest %}
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-4">
 							<div class='form-group'>
 								<label for="">
 									{{system.snippets.your_name}} <span>({{system.snippets.required}})</span>
@@ -71,12 +74,20 @@
 								<input value='{{ interaction.name }}' id='interaction_name' maxlength='100' name='interaction[name]' type='text' />
 							</div>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-4">
 							<div class='form-group'>
 								<label for="">
 									{{system.snippets.your_email}} <span>({{system.snippets.required}})</span>
 								</label>
 								<input value='{{ interaction.email }}' id='interaction_email' maxlength='100' name='interaction[email]' type='text' />
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class='form-group'>
+								<label for="">
+									Your Phone Number <span>({{system.snippets.required}})</span>
+								</label>
+								{{ customer_custom_phone }}
 							</div>
 						</div>
 					</div>
@@ -117,7 +128,7 @@
 						<div class="col-sm-6">
 							<div class='form-group'>
 								<label for="ticket_custom3">
-									Number of rooms needed?
+									Number of rooms needed for your trip?
 								</label>
 								{{ ticket_custom_number_of_rooms }}
 							</div>
@@ -385,7 +396,7 @@
 
 					<div class='form-group'>
 						<label for="">
-							{{system.snippets.message}} <span>({{system.snippets.required}})</span>
+							{{system.snippets.message}}
 						</label>
 						<textarea id='email_body' name='email[body]'>{{email.body}}</textarea>
 					</div>
@@ -410,6 +421,7 @@
 		</div>
 	</div>
 </div>
+
 <script type="text/javascript" src="{{desk_javascript_host}}portal/desk.portal.body.email_new.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript" src="//hotelguy.github.io/desk_theme/javascripts/desk.js"></script>
