@@ -4,8 +4,6 @@
 	<div id="system-snippets-name_required">{{system.snippets.name_required}}</div>
 	<div id="system-snippets-email_required">{{system.snippets.email_required}}</div>
 	<div id="system-snippets-invalid_email">{{system.snippets.invalid_email}}</div>
-	<div id="system-snippets-subject_required">{{system.snippets.subject_required}}</div>
-	<div id="system-snippets-question_required">{{system.snippets.question_required}}</div>
 	<div id="system-snippets-exceeding_max_chars">{{system.snippets.exceeding_max_chars}}</div>
 	<div id="max_number_attachments">{{desk.system.max_attachments}}</div>
 	<div id="system-snippets-add_attachment">{{system.snippets.add_attachment}}</div>
@@ -48,7 +46,7 @@
 						<div class="col-sm-3">
 							<div class='form-group'>
 								<label for="ticket_custom6">
-									State
+									State/Region
 								</label>
 								{{ ticket_custom_state_region }}
 							</div>
@@ -98,7 +96,11 @@
 								<label for="ticket_custom9">
 									What's your budget?
 								</label>
-								{{ ticket_custom_budget }}
+								<div class="input-group">
+									<span class="input-group-addon">$</span>
+									<input type="number" class="form-control" id="ticket_custom9" name="ticket[custom9]" min="1">
+									<span class="input-group-addon">.00</span>
+								</div>
 							</div>
 						</div>
 						<div class="col-sm-4">
@@ -122,10 +124,10 @@
 						</div>
 					</div>
 
-					<div id="rooms">
+					<div id="rooms" class="small">
 						<!-- room 1 -->
 						<div class="row room-info">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom1">
 										Check-in
@@ -133,7 +135,7 @@
 									{{ ticket_custom_check_in_1 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom2">
 										Check-out
@@ -141,7 +143,7 @@
 									{{ ticket_custom_check_out_1 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom4">
 										Room Type
@@ -149,7 +151,7 @@
 									{{ ticket_custom_room_type_1 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom11">
 										Guests in this room?
@@ -161,7 +163,7 @@
 
 						<!-- room 2 -->
 						<div class="row room-info">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom1">
 										Check-in
@@ -169,7 +171,7 @@
 									{{ ticket_custom_check_in_2 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom2">
 										Check-out
@@ -177,7 +179,7 @@
 									{{ ticket_custom_check_out_2 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom4">
 										Room Type
@@ -185,7 +187,7 @@
 									{{ ticket_custom_room_type_2 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom11">
 										Guests in this room?
@@ -197,7 +199,7 @@
 
 						<!-- room 3 -->
 						<div class="row room-info">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom1">
 										Check-in
@@ -205,7 +207,7 @@
 									{{ ticket_custom_check_in_3 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom2">
 										Check-out
@@ -213,7 +215,7 @@
 									{{ ticket_custom_check_out_3 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom4">
 										Room Type
@@ -221,7 +223,7 @@
 									{{ ticket_custom_room_type_3 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom11">
 										Guests in this room?
@@ -233,7 +235,7 @@
 
 						<!-- room 4 -->
 						<div class="row room-info">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom1">
 										Check-in
@@ -241,7 +243,7 @@
 									{{ ticket_custom_check_in_4 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom2">
 										Check-out
@@ -249,7 +251,7 @@
 									{{ ticket_custom_check_out_4 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom4">
 										Room Type
@@ -257,7 +259,7 @@
 									{{ ticket_custom_room_type_4 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom11">
 										Guests in this room?
@@ -269,7 +271,7 @@
 
 						<!-- room 5 -->
 						<div class="row room-info">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom1">
 										Check-in
@@ -277,7 +279,7 @@
 									{{ ticket_custom_check_in_5 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom2">
 										Check-out
@@ -285,7 +287,7 @@
 									{{ ticket_custom_check_out_5 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom4">
 										Room Type
@@ -293,7 +295,7 @@
 									{{ ticket_custom_room_type_5 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom11">
 										Guests in this room?
@@ -305,7 +307,7 @@
 
 						<!-- room 6 -->
 						<div class="row room-info">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom1">
 										Check-in
@@ -313,7 +315,7 @@
 									{{ ticket_custom_check_in_6 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom2">
 										Check-out
@@ -321,7 +323,7 @@
 									{{ ticket_custom_check_out_6 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom4">
 										Room Type
@@ -329,7 +331,7 @@
 									{{ ticket_custom_room_type_6 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom11">
 										Guests in this room?
@@ -341,7 +343,7 @@
 
 						<!-- room 7 -->
 						<div class="row room-info">
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom1">
 										Check-in
@@ -349,7 +351,7 @@
 									{{ ticket_custom_check_in_7 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-2">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom2">
 										Check-out
@@ -357,7 +359,7 @@
 									{{ ticket_custom_check_out_7 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom4">
 										Room Type
@@ -365,7 +367,7 @@
 									{{ ticket_custom_room_type_7 }}
 								</div>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<div class='form-group form-group-sm'>
 									<label for="ticket_custom11">
 										Guests in this room?
