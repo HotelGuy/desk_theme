@@ -6,7 +6,7 @@ $ ->
 	# Get City Details (city, region/state, country)
 	getcitydetails = (fqcn) ->
 		if typeof fqcn == 'undefined'
-			fqcn = jQuery('#f_elem_city').val()
+			fqcn = jQuery('#ticket_custom13').val()
 		cityfqcn = fqcn
 		if cityfqcn
 			jQuery.getJSON '//gd.geobytes.com/GetCityDetails?callback=?&fqcn=' + cityfqcn, (data) ->
@@ -28,3 +28,8 @@ $ ->
 			$('#ticket_custom13').val ui.item.value
 			getcitydetails ui.item.value
 			false
+
+	# room types
+	# $('#room-count').change ->
+		# n = $(this).val()
+		# console.log n for [1..n] if n

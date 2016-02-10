@@ -7,9 +7,66 @@ layout: default
 
 <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
 
-<form action="" method="post">
+<form action="" method="get">
+
 	<div class="form-group">
-		<label for="destination">City</label>
-		<input class="form-control" name="destination" value="" id="destination"/>
+		<label for="ticket_custom13">City</label>
+		<input class="form-control" name="ticket_custom13" value="" id="ticket_custom13"/>
 	</div>
+
+	<div class="row" id="location_fields" style="display:block;">
+		<div class="col-sm-5">
+			<div class='form-group'>
+				<label for="ticket_custom5">
+					City
+				</label>
+				{{ ticket_custom_city }}
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class='form-group'>
+				<label for="ticket_custom6">
+					State
+				</label>
+				{{ ticket_custom_state }}
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class='form-group'>
+				<label for="ticket_custom7">
+					Country
+				</label>
+				{{ ticket_custom_country }}
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="form-group">
+			<label for="">How many rooms?</label>
+			<select id="room-count" class="form-control" name="">
+				<option value="1">1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</div>
+	</div>
+
+	<div id="rooms">
+		<div class="row room-type">
+			<select class="form-control" name="room_types[]">
+				<option value="1">1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</div>
+	</div>
+
+
+
 </form>
