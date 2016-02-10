@@ -11,4 +11,8 @@
 		 @extend .form-control;
 	}
 
+	.room-info:nth-of-type(odd) {
+		background: #f0f0f0;
+	}
+
 }
