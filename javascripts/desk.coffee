@@ -6,13 +6,13 @@ $ ->
 	# Get City Details (city, region/state, country)
 	getcitydetails = (fqcn) ->
 		if typeof fqcn == 'undefined'
-			fqcn = jQuery('#ticket_custom13').val()
+			fqcn = $('#ticket_custom13').val()
 		cityfqcn = fqcn
 		if cityfqcn
-			jQuery.getJSON '//gd.geobytes.com/GetCityDetails?callback=?&fqcn=' + cityfqcn, (data) ->
-				jQuery('#ticket_custom5').val data.geobytescity
-				jQuery('#ticket_custom6').val data.geobytesregion
-				jQuery('#ticket_custom7').val data.geobytescountry
+			$.getJSON '//gd.geobytes.com/GetCityDetails?callback=?&fqcn=' + cityfqcn, (data) ->
+				$('#ticket_custom5').val data.geobytescity
+				$('#ticket_custom6').val data.geobytesregion
+				$('#ticket_custom7').val data.geobytescountry
 			return
 		return
 
@@ -29,7 +29,27 @@ $ ->
 			getcitydetails ui.item.value
 			false
 
-	# room types
-	# $('#room-count').change ->
-		# n = $(this).val()
-		# console.log n for [1..n] if n
+	# show/hide rooms
+	$('#rooms .room-info:gt(0)').hide()
+	$('#ticket_custom3').change ->
+		$('#rooms .room-info:gt(0)').hide()
+		$('#rooms .more-than-8').hide()
+		n = parseInt $(this).val()
+		$('#rooms .room-info:lt('+n+')').show()
+		if $(this).val() == 'I need more than 8 rooms! '
+		  $('#rooms .room-info').hide()
+		  $('#rooms .more-than-8').show()
+
+	# room fields generator
+	generateFields = (idsArr, defaultID) ->
+		$.each idsArr, (index, id) ->
+			$elem = $('#ticket_custom'+id)
+			$default = $('#ticket_custom'+defaultID)
+			theName = $elem.attr('name')
+			theID = $elem.attr('id')
+			$elem.replaceWith( $default.clone().attr('name', theName).attr('id', theID) )
+			return
+	roomTypeIds = [32,33,34,35,36,37]
+	generateFields(roomTypeIds, 4)
+	roomGuestCountIds = [26,27,28,29,30,31]
+	generateFields(roomGuestCountIds, 11)

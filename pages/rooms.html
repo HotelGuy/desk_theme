@@ -1,0 +1,307 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
+
+<form action="" method="get">
+
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="ticket_custom3">
+					Number of rooms needed?
+				</label>
+				<select class="default xl" id="ticket_custom3" name="ticket[custom3]"><option value="" selected="selected">Select the number of rooms needed for your trip</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="I need more than 8 rooms! ">I need more than 8 rooms! </option></select>
+				</div>
+			</div>
+		</div>
+
+		<div id="rooms">
+
+			<!-- room 1 -->
+			<div class="row room-info">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom1">
+						Check-in
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom1" name="ticket[custom1]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom2">
+						Check-out
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom2" name="ticket[custom2]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom4">
+						Room Type
+					</label>
+					<select class="default xl form-control" id="ticket_custom4" name="ticket[custom4]">
+						<option value="" selected="selected">Select the type of room</option>
+						<option value="King Bed">King Bed</option>
+						<option value="Queen Bed">Queen Bed</option>
+						<option value="Queen/Queen (2 beds)">Queen/Queen (2 beds)</option>
+						<option value="Jr. Suite w/ King Bed (additional living/seating area, not separated from bedroom) ">Jr. Suite w/ King Bed (additional living/seating area, not separated from bedroom) </option>
+						<option value="1 Bedroom Suite (additional living/seating area separate from bedroom)">1 Bedroom Suite (additional living/seating area separate from bedroom)</option>
+						<option value="2 Bedroom Suite (additional living/seating area separate from both bedrooms)">2 Bedroom Suite (additional living/seating area separate from both bedrooms)</option>
+						<option value="Other (please write what you are looking for as detailed as possible in the &quot;Notes&quot; section)">Other (please write what you are looking for as detailed as possible in the "Notes" section)</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom11">
+						Guests in this room?
+					</label>
+					<select class="default xl form-control" id="ticket_custom11" name="ticket[custom11]">
+						<option value="" selected="selected">Guests in this room</option>
+						<option value="1 Adult, 0 Children">1 Adult, 0 Children</option>
+						<option value="2 Adults, 0 Children">2 Adults, 0 Children</option>
+						<option value="3 Adults, 0 Children">3 Adults, 0 Children</option>
+						<option value="4 Adults, 0 Children">4 Adults, 0 Children</option>
+						<option value="1 Adult, 1 Child">1 Adult, 1 Child</option>
+						<option value="1 Adult, 2 Children">1 Adult, 2 Children</option>
+						<option value="2 Adults, 1 Child">2 Adults, 1 Child</option>
+						<option value="2 Adults, 2 Children">2 Adults, 2 Children</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<!-- room 2 -->
+		<div class="row room-info">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom1">
+						Check-in
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom14" name="ticket[custom14]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom2">
+						Check-out
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom20" name="ticket[custom20]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom4">
+						Room Type
+					</label>
+					<input class="default l" id="ticket_custom32" maxlength="100" name="ticket[custom32]" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom11">
+						Guests in this room?
+					</label>
+					<input class="default l" id="ticket_custom26" maxlength="100" name="ticket[custom26]" type="text" value="">
+				</div>
+			</div>
+		</div>
+
+		<!-- room 3 -->
+		<div class="row room-info">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom1">
+						Check-in
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom15" name="ticket[custom15]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom2">
+						Check-out
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom21" name="ticket[custom21]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom4">
+						Room Type
+					</label>
+					<input class="default l" id="ticket_custom33" maxlength="100" name="ticket[custom33]" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom11">
+						Guests in this room?
+					</label>
+					<input class="default l" id="ticket_custom27" maxlength="100" name="ticket[custom27]" type="text" value="">
+				</div>
+			</div>
+		</div>
+
+		<!-- room 4 -->
+		<div class="row room-info">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom1">
+						Check-in
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom16" name="ticket[custom16]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom2">
+						Check-out
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom22" name="ticket[custom22]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom4">
+						Room Type
+					</label>
+					<input class="default l" id="ticket_custom34" maxlength="100" name="ticket[custom34]" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom11">
+						Guests in this room?
+					</label>
+					<input class="default l" id="ticket_custom28" maxlength="100" name="ticket[custom28]" type="text" value="">
+				</div>
+			</div>
+		</div>
+
+		<!-- room 5 -->
+		<div class="row room-info">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom1">
+						Check-in
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom17" name="ticket[custom17]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom2">
+						Check-out
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom23" name="ticket[custom23]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom4">
+						Room Type
+					</label>
+					<input class="default l" id="ticket_custom35" maxlength="100" name="ticket[custom35]" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom11">
+						Guests in this room?
+					</label>
+					<input class="default l" id="ticket_custom29" maxlength="100" name="ticket[custom29]" type="text" value="">
+				</div>
+			</div>
+		</div>
+
+		<!-- room 6 -->
+		<div class="row room-info">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom1">
+						Check-in
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom18" name="ticket[custom18]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom2">
+						Check-out
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom24" name="ticket[custom24]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom4">
+						Room Type
+					</label>
+					<input class="default l" id="ticket_custom36" maxlength="100" name="ticket[custom36]" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom11">
+						Guests in this room?
+					</label>
+					<input class="default l" id="ticket_custom30" maxlength="100" name="ticket[custom30]" type="text" value="">
+				</div>
+			</div>
+		</div>
+
+		<!-- room 7 -->
+		<div class="row room-info">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom1">
+						Check-in
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom19" name="ticket[custom19]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom2">
+						Check-out
+					</label>
+					<input class="default xl custom_field_date hasDatepicker" id="ticket_custom25" name="ticket[custom25]" style="width:100px;" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom4">
+						Room Type
+					</label>
+					<input class="default l" id="ticket_custom37" maxlength="100" name="ticket[custom37]" type="text" value="">
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="ticket_custom11">
+						Guests in this room?
+					</label>
+					<input class="default l" id="ticket_custom31" maxlength="100" name="ticket[custom31]" type="text" value="">
+				</div>
+			</div>
+		</div>
+
+		<!-- more than 8 -->
+		<h4 class="more-than-8" style="display:none;">We'll contact you regarding your rooms.</h4>
+
+	</div>
+
+
+</form>
