@@ -4,30 +4,25 @@
 $ ->
 
 	# Get City Details (city, region/state, country)
-	getcitydetails = (fqcn) ->
-		if typeof fqcn == 'undefined'
-			fqcn = $('#ticket_custom13').val()
-		cityfqcn = fqcn
-		if cityfqcn
-			$.getJSON '//gd.geobytes.com/GetCityDetails?callback=?&fqcn=' + cityfqcn, (data) ->
-				$('#ticket_custom5').val data.geobytescity
-				$('#ticket_custom6').val data.geobytesregion
-				$('#ticket_custom7').val data.geobytescountry
-			return
-		return
+	getcitydetails = (place) ->
+		console.log place
+	# 	if typeof place == 'undefined'
+	# 		place = $('#ticket_custom13').val()
+	# 	cityplace = place
+	# 	if cityplace
+	# 		$.getJSON '//gd.geobytes.com/GetCityDetails?callback=?&place=' + cityplace, (data) ->
+	# 			$('#ticket_custom5').val data.geobytescity
+	# 			$('#ticket_custom6').val data.geobytesregion
+	# 			$('#ticket_custom7').val data.geobytescountry
+	# 		return
+	# 	return
 
 	# autocomplete cities
-	$('#ticket_custom13').autocomplete
-		source: (request, response) ->
-			$.getJSON '//gd.geobytes.com/AutoCompleteCity?callback=?&q=' + request.term, (data) ->
-				response data
-				return
-			return
-		minLength: 3
-		select: (event, ui) ->
-			$('#ticket_custom13').val ui.item.value
-			getcitydetails ui.item.value
-			false
+	input = document.getElementById('ticket_custom13')
+	autocomplete = new (google.maps.places.Autocomplete)(input, types: [ '(cities)' ])
+	google.maps.event.addListener autocomplete, 'place_changed', ->
+		getcitydetails autocomplete.getPlace()
+		return
 
 	# show/hide rooms
 	$('#rooms .room-info:gt(0)').hide()
@@ -53,6 +48,6 @@ $ ->
 	generateFields([26,27,28,29,30,31], 11) # guest counts
 
 	# validations
-	$('#customer_custom8').rules 'add',
-		required: true
-		messages: required: 'Phone Number is required.'
+	# $('#customer_custom8').rules 'add',
+	# 	required: true
+	# 	messages: required: 'Phone Number is required.'
