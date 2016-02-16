@@ -48,6 +48,6 @@ $ ->
 	generateFields([26,27,28,29,30,31], 11) # guest counts
 
 	# validations
-	# $('#customer_custom8').rules 'add',
-	# 	required: true
-	# 	messages: required: 'Phone Number is required.'
+	$('#customer_custom8').rules 'add',
+		required: true
+		messages: required: 'Phone Number is required.'
