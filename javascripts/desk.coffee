@@ -51,3 +51,6 @@ $ ->
 	$('#customer_custom8').rules 'add',
 		required: true
 		messages: required: 'Phone Number is required.'
+	$('#ticket_custom3').rules 'add',
+		required: true
+		messages: required: 'Select the number of rooms needed.'
