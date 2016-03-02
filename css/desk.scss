@@ -4,18 +4,18 @@
 .bs {
 
 	// @import "bootswatch/superhero/variables";
-	// @import "bootstrap";
-	// // @import "bootswatch/superhero/bootswatch";
-	//
-	// input, select, textarea {
-	// 	 @extend .form-control;
-	// }
-	//
-	// .room-info {
-	// 	padding-top: 10px;
-	// 	&:nth-of-type(odd) {
-	// 		background: #f0f0f0;
-	// 	}
-	// }
+	@import "bootstrap";
+	// @import "bootswatch/superhero/bootswatch";
+
+	input, select, textarea {
+		 @extend .form-control;
+	}
+
+	.room-info {
+		padding-top: 10px;
+		&:nth-of-type(odd) {
+			background: #f0f0f0;
+		}
+	}
 
 }
